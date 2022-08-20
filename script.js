@@ -1,6 +1,7 @@
 
 /* Get the element you want displayed in fullscreen mode */
 var elem = document.body;
+var fullscreenButton = document.querySelector("#fullscreen-button-container");
 
 /* When the openFullscreen() function is executed, open the video in fullscreen.
 Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
@@ -12,6 +13,7 @@ function openFullscreen() {
     } else if (elem.msRequestFullscreen) { /* IE11 */
         elem.msRequestFullscreen();
     }
+    fullscreenButton.style.display = "none";
 }
 
 $(document).ready(function () {
