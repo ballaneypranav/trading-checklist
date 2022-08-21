@@ -7,58 +7,46 @@
     <title>bs4 todo list - Bootdey.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/b63fe0fba8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="fullscreen-button-container" class="float-right mr-3">
-        <button id="fullscreen-button" class="btn btn-secondary" onclick="openFullscreen();">
-            <i class="fa-solid fa-expand"></i>
-        </button>
+    <div class="container">
+        <nav class="navbar bg-light">
+          <div class="container-fluid">
+            <div id="fullscreen-button-container" class="mx-auto">
+                <button id="fullscreen-button" class="btn btn-secondary" onclick="openFullscreen();">
+                    <i class="fa-solid fa-expand"></i>
+                </button>
+            </div>
+          </div>
+        </nav>
     </div>
-<div id="todo-container" class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card card-white">
-                <div class="card-body">
-                    <form action="javascript:void(0);">
-                        <input type="text" class="form-control add-task" placeholder="New Task...">
-                    </form>
-                    <ul class="nav nav-pills todo-nav">
-                        <li role="presentation" class="nav-item all-task active"><a href="#" class="nav-link">All</a></li>
-                        <li role="presentation" class="nav-item active-task"><a href="#" class="nav-link">Active</a></li>
-                        <li role="presentation" class="nav-item completed-task"><a href="#" class="nav-link">Completed</a></li>
-                    </ul>
-                    <div class="todo-list">
-                        <div class="todo-item">
-                            <div class="checker"><span class=""><input type="checkbox"></span></div>
-                            <span>Create theme</span>
-                            <a href="javascript:void(0);" class="float-right remove-todo-item"><i class="icon-close"></i></a>
-                        </div>
-                        <div class="todo-item">
-                            <div class="checker"><span class=""><input type="checkbox"></span></div>
-                            <span>Work on wordpress</span>
-                            <a href="javascript:void(0);" class="float-right remove-todo-item"><i class="icon-close"></i></a>
-                        </div>
-                        
-                        <div class="todo-item">
-                            <div class="checker"><span class=""><input type="checkbox"></span></div>
-                            <span>Organize office main department</span>
-                            <a href="javascript:void(0);" class="float-right remove-todo-item"><i class="icon-close"></i></a>
-                        </div>
-                        <div class="todo-item">
-                            <div class="checker"><span><input type="checkbox"></span></div>
-                            <span>Error solve in HTML template</span>
-                            <a href="javascript:void(0);" class="float-right remove-todo-item"><i class="icon-close"></i></a>
+    <div id="todo-container" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-white">
+                    <div class="card-body">
+                        <div id="checklist">
+                            <h1>Wyckoff</h1>
+                            <div class="checklist-item bg-light p-3">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                  <label class="form-check-label w-100" for="flexCheckDefault">
+                                    Default checkbox
+                                  </label>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
     <script src="script.js"></script>
 
 </body>
