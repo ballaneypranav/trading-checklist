@@ -1,23 +1,41 @@
-- title: Cup with Handle
-  img: cup-with-handle.jpg
-  checklist:
+- title: Common
+  img: None
+  checklist: 
     - Base duration > 4 weeks
     - Price > 150MA
     - RS at/near 52 wk high
+    - Volume smaller on contractions
+    - Volume < 30 MA before breakout
+    - Volume > 2x 30 MA on breakout
+    - Volume > 3-5x of day before breakout
+ 
+- title: Cup with Handle
+  img: ./img/cup-with-handle.jpg
+  checklist:
     - Rally before cup >= 30%
     - Cup depth <= 35%
     - Handle depth <= 10%
     - Handle duration >= 1 week
     - Handle shows volume contraction
     - Handle shows price contraction
-    - Volume smaller on contractions
-    - Volume < 30 MA before breakout
-    - Volume > 2x 30 MA on breakout
-    - Volume > 3-5x of day before breakout
       
 - title: Wyckoff Wave / VCP
-  img: wyckoff.jpg
+  img: ./img/wyckoff.jpg
   checklist:
-    - Base duration > 4 weeks
-    - Price > 150MA
-    - RS at/near 52 wk high
+    - Reducing price contractions
+    - All contraction < 50%
+    - Latest contraction < 10%
+
+- title: High Tight Flag
+  img: ./img/high-tight-flag.jpg
+  checklist:
+    - Rally before base > 100% under 8 weeks
+    - Peak to trough decline in base < 25%
+
+- title: Darvas Box
+  img: ./img/darvas-box.jpg
+  checklist:
+    - Peak to trough decline in the box < 25%
+    - Final contraction in box < 10%
+
+

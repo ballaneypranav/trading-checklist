@@ -16,16 +16,24 @@ def main():
     with open('templates/checklist-item.html') as f:
         checklist_item_template = f.read()
 
+    image_template = """<img class="img-fluid" src="{{{IMAGE_SRC}}}"/>"""
+
 
     sections_html = []
     for section in data:
         section_html = section_template.replace("{{{TITLE}}}", section['title'])
-        section_html = section_html.replace("{{{IMAGE}}}", section['img'])
+        if section['img'] != "None":
+            image_html = image_template.replace("{{{IMAGE_SRC}}}", section['img'])
+            section_html = section_html.replace("{{{IMAGE}}}", image_html)
+        else:
+            section_html = section_html.replace("{{{IMAGE}}}", "")
+        print(section['img'])
+        print(section_html)
 
         checklist_items_html = []
         for checklist_item in section['checklist']:
             checklist_item_html = checklist_item_template.replace("{{{CHECKLIST_ITEM}}}", checklist_item)
-            checklist_item_html = checklist_item_html.replace("{{{RANDOM_ID}}}", get_md5(checklist_item))
+            checklist_item_html = checklist_item_html.replace("{{{RANDOM_ID}}}", get_ID(section['title'], checklist_item))
             checklist_items_html.append(checklist_item_html)
 
         checklist_items_html = "".join(checklist_items_html)
@@ -39,10 +47,11 @@ def main():
     with open('index.html', 'w') as f:
         f.write(index)
 
-def get_md5(s):
-    source = s.encode()
-    md5 = hashlib.md5(source).hexdigest()
-    return md5
+def get_ID(title, item):
+    title = ''.join(filter(str.isalnum, title))
+    item = ''.join(filter(str.isalnum, item))
+    ID = f"{title}${item}"
+    return ID
 
 if __name__ == "__main__":
     main()
