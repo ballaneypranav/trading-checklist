@@ -27,8 +27,6 @@ def main():
             section_html = section_html.replace("{{{IMAGE}}}", image_html)
         else:
             section_html = section_html.replace("{{{IMAGE}}}", "")
-        print(section['img'])
-        print(section_html)
 
         checklist_items_html = []
         for checklist_item in section['checklist']:
