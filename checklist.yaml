@@ -8,7 +8,13 @@
     - Volume < 30 MA before breakout
     - Volume > 2x 30 MA on breakout
     - Volume > 3-5x of day before breakout
- 
+
+- title: Bonus
+  img: None
+  checklist: 
+  - Shake-out demand tail
+  - Gap-down reversal bar
+
 - title: Cup with Handle
   img: ./img/cup-with-handle.jpg
   checklist:
@@ -18,7 +24,7 @@
     - Handle duration >= 1 week
     - Handle shows volume contraction
     - Handle shows price contraction
-      
+
 - title: Wyckoff Wave / VCP
   img: ./img/wyckoff.jpg
   checklist:
