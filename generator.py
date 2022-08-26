@@ -22,11 +22,16 @@ def main():
     sections_html = []
     for section in data:
         section_html = section_template.replace("{{{TITLE}}}", section['title'])
-        if section['img'] != "None":
+        if 'img' in section.keys():
             image_html = image_template.replace("{{{IMAGE_SRC}}}", section['img'])
             section_html = section_html.replace("{{{IMAGE}}}", image_html)
         else:
             section_html = section_html.replace("{{{IMAGE}}}", "")
+
+        if 'notes' in section.keys():
+            section_html = section_html.replace("{{{NOTES}}}", section['notes'])
+        else:
+            section_html = section_html.replace("{{{NOTES}}}", '')
 
         checklist_items_html = []
         for checklist_item in section['checklist']:
